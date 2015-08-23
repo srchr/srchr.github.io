@@ -1,0 +1,64 @@
+/* 
+SIT313 Mobile Computing Assigment 1 - Steven Christian 212153343 srchr@deakin.edu.au
+  */
+  
+/* Fonts */
+@font-face {
+    font-family: German;
+    src: url(fonts/din1451alt.ttf) format('truetype');
+}
+
+body {
+	background: url(../Images/bayern_background.png);
+	background-repeat: repeat-y;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: 100% 100%;
+}
+
+h1 {
+	font-family: German, monospace;
+	color: #ffd700;
+	text-shadow: 1px 1px #000000;
+}
+
+h2 {
+	color: #ffd700;
+	text-shadow: 1px 1px #000000;
+}
+
+h4 {
+	color: #ffd700;
+	text-shadow: 1px 1px #000000;
+}
+
+p {
+	color: #ffd700;
+	text-shadow: 1px 1px #000000;
+}
+
+.ui-page {
+	background: transparent;
+}
+.ui-content {
+	background: transparent;
+}
+
+.showcasetxt {
+	width: 90%;
+	min-width: 350px;
+	display: inline-block;
+	padding: 40px;
+}
+
+.menushowcase {
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	min-width: 250px;
+	max-height:500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+

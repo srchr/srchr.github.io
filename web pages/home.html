@@ -1,0 +1,662 @@
+<!--
+SIT313 Mobile Computing Assigment 1 - Steven Christian 212153343 srchr@deakin.edu.au
+-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Homepage</title>
+<!--  Linking external stylesheets  -->
+<link rel="stylesheet" href="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+<link rel="stylesheet" href="../themes/theme.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="../css/homepage.css"/>
+
+<!-- Scripts used by JQuery  -->
+<script src="../jquery-1.11.0.js" type="text/javascript"></script>
+<script src="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>
+
+<!-- Meta data to tell the device to use the device's width as the page width   -->
+<meta name="viewport" content="width=device-width"/>
+</head>
+<body>
+<!-- This is the first Jquery page in Index.html -->
+<section data-theme="c" id="index" data-role="page"> <!-- First page Selection tag  -->
+  <div class="ui-content"> <img src="../images/logo.png" class="logo"></div> <!--  Header Logo  -->
+  <!-- Ul Tag for the main menu with specific style classes.  -->
+  <ul data-theme="c" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="margin-right: 50px; margin-left:50px">
+    <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-top ui-btn-up-c"> <!-- First menu item "Menu"  -->
+      <div class="ui-btn-inner ui-li ui-corner-top">
+        <div class="ui-btn-text"><a href="#pg_menu" data-transition="slideleft" class="ui-link-inherit"> <img src="../images/menu.png" class="ui-li-thumb ui-corner-tl Tumbleimg">
+          <h4 class="ui-li-heading">Menu</h4>
+          </a></div>
+        <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div>
+    </li>
+    <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-top ui-btn-up-c"> <!--  Second menu item "Make A Reservation"  -->
+      <div class="ui-btn-inner ui-li ui-corner-top">
+        <div class="ui-btn-text"><a href="#Reservations" data-transition="slideleft" class="ui-link-inherit"> <img p src="../images/reservation.png" class="ui-li-thumb ui-corner-tl Tumbleimg">
+          <h4 class="ui-li-heading">Make A Reservation</h4>
+          </a></div>
+        <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div>
+    </li>
+    <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-top ui-btn-up-c"><!-- Third menu item "Recipes"  -->
+      <div class="ui-btn-inner ui-li ui-corner-top">
+        <div class="ui-btn-text"><a href="#Recipes"  data-transition="slideleft" class="ui-link-inherit"> <img src="../images/recipes.png" class="ui-li-thumb ui-corner-tl Tumbleimg">
+          <h4 class="ui-li-heading">Recipes</h4>
+          </a></div>
+        <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div>
+    </li>
+    <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-top ui-btn-up-c"><!-- Fourth menu item "Contact Us"  -->
+      <div class="ui-btn-inner ui-li ui-corner-top">
+        <div class="ui-btn-text"><a href="#ContactUs" data-transition="slideleft" class="ui-link-inherit"> <img src="../images/contactus.png" class="ui-li-thumb ui-corner-tl Tumbleimg">
+          <h4 class="ui-li-heading">Contact Us</h4>
+          </a></div>
+        <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div>
+    </li>
+    <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-top ui-btn-up-c"><!-- Fifth menu item "About Us" This is an external page named aboutus.html -->
+      <div class="ui-btn-inner ui-li ui-corner-top">
+        <div class="ui-btn-text"><a href="aboutus.html" rel="external" data-transition="slideleft" class="ui-link-inherit"> <img src="../images/aboutus.png" class="ui-li-thumb ui-corner-tl Tumbleimg">
+          <h4 class="ui-li-heading">About Us</h4>
+          </a></div>
+        <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div>
+    </li>
+  </ul>
+</section>
+<!-- End of the homepage -->
+<!--  Menu Contents -->
+<div id="pg_menu" data-role="page">
+  <nav data-role="navbar"> <!-- Navigation bar  -->
+    <ul>
+      <li><a href="#index" class="ui-btn ui-icon-back ui-btn-icon-top ui-btn-active ui-state-persist">Menu</a></li> <!-- This button will be highlighted  -->
+      <li><a href="#Recipes" class="ui-btn ui-icon-heart ui-btn-icon-top">View Our Recipes</a></li>
+      <li><a href="#Reservations" class="ui-btn ui-icon-check ui-btn-icon-top">Make A Reservation</a></li>
+    </ul>
+  </nav>
+  <!-- Menu items -->
+  <div class="ui-content">
+    <h2>Menu</h2>
+    <ul data-role="listview" data-divider-theme="b">
+      <li data-role="list-divider" class="listDivider">Appetisers</li>  <!-- Dividers are used to split the list to different section  -->
+      <li> <a href="#Pretzel" data-transition="pop">Bavarian Pretzel</a> </li>
+      <li> <a href="#Brotkorb" data-transition="pop">Brotkorb</a> </li>
+      <li> <a href="#Langosch" data-transition="pop">Langosch</a> </li>
+      <li data-role="list-divider" data-transition="pop" class="listDivider">Entrees</li>      <!-- Dividers are used to split the list to different section  -->
+      <li> <a href="#Gulaschsuppe" data-transition="pop">Gulaschsuppe</a> </li>
+      <li> <a href="#Maultaschen" data-transition="pop">Maultaschen</a> </li>	  
+      <li> <a href="#Brotzeit" data-transition="pop">Brotzeit For Two</a> </li>
+      <li data-role="list-divider" data-transition="pop" class="listDivider">Sausages</li>     <!-- Dividers are used to split the list to different section  -->
+      <li> <a href="#Bratwurst" data-transition="pop">Bratwurst</a> </li>
+      <li> <a href="#Kasekrainer" data-transition="pop">Kasekrainer</a> </li>
+      <li> <a href="#Nurnberger" data-transition="pop">Nurnberger</a> </li>
+	  <li data-role="list-divider" data-transition="pop" class="listDivider">Schnitzel</li>     <!-- Dividers are used to split the list to different section  -->
+	  <li> <a href="#WeinerSchnitzel" data-transition="pop">Weiner Schnitzel</a> </li>
+	  <li> <a href="#HaehnchenSchnitzel" data-transition="pop">Haehnchen Schnitzel</a> </li>
+	  <li data-role="list-divider" data-transition="pop" class="listDivider">Vegetarian</li>     <!-- Dividers are used to split the list to different section  -->
+	  <li> <a href="#GemueseStrudel" data-transition="pop">Gemuese Strudel</a> </li>
+	  <li> <a href="#Kasespatzle" data-transition="pop">Kasespatzle</a> </li>	  
+	  <li data-role="list-divider" data-transition="pop" class="listDivider">Desserts</li>     <!-- Dividers are used to split the list to different section  -->	  
+	  <li> <a href="#Apfelstrudel" data-transition="pop">Apfelstrudel</a> </li>	  
+	  <li> <a href="#Schokoladenbrezel" data-transition="pop">Schokoladenbrezel</a> </li>	  
+	  <li> <a href="#OmasKaesekuchen" data-transition="pop">Omas Kaesekuchen</a> </li>	  
+      <li data-role="list-divider" data-transition="pop" class="listDivider">Beverages</li>   <!-- Dividers are used to split the list to different section  -->
+      <li> <a href="#Biers" data-transition="pop">Biers</a> </li>
+      <li> <a href="#Wines" data-transition="pop">Wines</a> </li>
+	  <li> <a href="#SoftDrinks" data-transition="pop">Soft Drinks</a> </li>
+    </ul>
+  </div>
+</div>
+<!-- End of the Menu  -->
+
+<!-- Dialog boxes displaying information about the menu items  -->
+
+<!-- Bavarian Pretzel -->
+<div id="Pretzel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Bavarian Pretzel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/BavarianPretzel.jpeg"/> 
+    <p class="showcasetxt textes">Freshly baked Bavarian pretzel served with butter.</p>
+  </div>
+</div>
+
+<!-- Brotkorb -->
+<div id="Brotkorb"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Brotkorb</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Brotkorb.jpg"/>
+    <p class="showcasetxt textes">A selection of freshly baked German bread served with butter.</p>
+  </div>
+</div>
+
+<!-- Langosch -->
+<div id="Langosch"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Langosch</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Langosch.jpg"/>
+    <p class="showcasetxt textes">House-made freshly baked garlic bread sprinkled with sea salt.</p>
+  </div>
+</div>
+
+<!-- Gulaschsuppe -->
+<div id="Gulaschsuppe"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Gulaschsuppe</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Gulaschsuppe.jpg"/>
+    <p class="showcasetxt textes">Spicy rich beef stew soup, served with German  bread roll.</p>
+  </div>
+</div>
+
+<!-- Maultaschen -->
+<div id="Maultaschen"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Maultaschen</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Maultaschen.jpg"/>
+    <p class="showcasetxt textes">Bavarian beef dumplings.</p>
+  </div>
+</div>
+
+<!-- Brotzeit -->
+<div id="Brotzeit"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Brotzeit For Two</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Brotzeit.jpg"/>
+    <p class="showcasetxt textes">Selection of smoked and cured cold cuts, Swiss cheese, liverwurst, pork belly, obazda and pickles, served with freshly baked bread.</p>
+  </div>
+</div>
+
+<!-- Bratwurst -->
+<div id="Bratwurst"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Bratwurst</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Bratwurst.jpg"/>
+    <p class="showcasetxt textes">The classic world famous German pork sausage.</p>
+  </div>
+</div>
+
+<!-- Kasekrainer -->
+<div id="Kasekrainer"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Kasekrainer</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/kasekrainer.jpg"/>
+    <p class="showcasetxt textes">Traditional spicy Kransky filled with cheese.</p>
+  </div>
+</div>
+
+<!-- Nurnberger -->
+<div id="Nurnberger"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Nurnberger</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Nurnberger.jpg"/>
+    <p class="showcasetxt textes">Half dozen Bavarian Country mini sausages.</p>
+  </div>
+</div>
+
+<!-- Weiner Schnitzel -->
+<div id="WeinerSchnitzel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Weiner Schnitzel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/WeinerSchnitzel.jpg"/>
+    <p class="showcasetxt textes">Viennese style freshly crumbed pork fillet, served with Bavarian potato salad, lemon and house-made garlic-herb mayonnaise.</p>
+  </div>
+</div>
+
+<!-- Haehnchen Schnitzel -->
+<div id="HaehnchenSchnitzel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Haehnchen Schnitzel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/HaehnchenSchnitzel.jpg"/>
+    <p class="showcasetxt textes">Viennese style freshly crumbed marinated chicken breast served with garden salad, chips and house-made garlic-herb mayonnaise.</p>
+  </div>
+</div>
+
+<!-- Gemuese Strudel -->
+<div id="GemueseStrudel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Gemuese Strudel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/GemueseStrudel.png"/>
+    <p class="showcasetxt textes">Roasted vegetable strudel served with white wine cream sauce and garden salad.</p>
+  </div>
+</div>
+
+<!-- Kasespatzle -->
+<div id="Kasespatzle"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Kasespatzle</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Kasespatzle.jpg"/>
+    <p class="showcasetxt textes">House-made German egg noodles baked with herbs, spinach and Swiss cheese, served with a side salad.</p>
+  </div>
+</div>
+
+<!-- Apfelstrudel -->
+<div id="Apfelstrudel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Apfelstrudel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Apfelstrudel.jpg"/>
+    <p class="showcasetxt textes">Warm house-made apple strudel on vanilla sauce and house-made ice cream.</p>
+  </div>
+</div>
+
+<!-- Schokoladenbrezel -->
+<div id="Schokoladenbrezel"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Schokoladenbrezel</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Schokoladenbrezel.jpg"/>
+    <p class="showcasetxt textes">Sweet chocolate coated pretzel served with vanilla sauce, house amde ice cream and Mixed Berries</p>
+  </div>
+</div>
+
+<!-- Omas Kaesekuchen -->
+<div id="OmasKaesekuchen"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Omas Kaesekuchen</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/OmasKaesekuchen.jpg"/>
+    <p class="showcasetxt textes">Our own Bavarian style baked cheesecake served with whipped cream.</p>
+  </div>
+</div>
+
+<!-- Biers -->
+<div id="Biers"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Our Biers</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/biers.jpg"/>
+    <p class="showcasetxt textes">The Bavarians introduced the Reinheitsgebot (Purity Laws) in 1487. <br>
+	  These laws stipulated that only water, barley, and hops were allowed in the making of Bier.<br>
+	  Today, half a millennium later, the laws still apply to the brewing of the Biers we serve at the Schnitzelhaus.<br>
+	  Further to that, we've thrown off the restrictive shackles of Munich's corporate breweries and spread our wings to <br>
+	  source the very finest Biers, schnapps and liquors from the best boutique producers in Bavaria.
+      <br>
+	  <br>
+	  We're independent. We're free. We're happy. And it shows.</p>
+  </div>
+</div>
+
+<!-- Wines   -->
+<div id="Wines"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Our Wines</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/Wine.jpg"/>
+    <p class="showcasetxt textes">Of course, no serious Melbourne diner lives by Bier alone. We also have an international list of German Austrian wines.</p>
+  </div>
+</div>
+
+<!-- Soft Drinks -->
+<div id="SoftDrinks"  data-role="page" data-dialog="true" data-close-btn="right" data-theme="a">
+  <div data-role="header">
+    <h1>Soft Drinks</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <br>
+    <!-- Text and image aligned using homepage.css -->
+    <img class="menushowcase"  src="../images/SoftDrinks.jpg"/>
+    <p class="showcasetxt textes">For non-alcohol drinkers who are looking to quench their thirst, we offer authentic German Austrian soft drinks.</p>
+  </div>
+</div>
+
+<!-- End of Dialog pages for the Menu page -->
+
+<!-- This is the Reservations page which is linked to the Reservations button in the first page -->
+<div id="Reservations" data-role="page">
+  <nav data-role="navbar"> <!-- Navigation Bar -->
+    <ul>
+      <li><a href="#index" class="ui-btn ui-icon-back ui-btn-icon-top ">Menu</a></li>
+      <li><a href="#Recipes" class="ui-btn ui-icon-heart ui-btn-icon-top">View Our Recipes</a></li>
+      <li><a href="#Reservations" class="ui-btn ui-icon-check ui-btn-icon-top ui-btn-active ui-state-persist">Make A Reservation</a></li>
+    </ul>
+  </nav>
+  <div class="ui-content">
+    <h2 align="center">Online Booking Request & Enquiry</h2>
+    <br>
+    <p>PLEASE NOTE this is a booking enquiry ONLY. We will be in contact with you shortly to confirm your reservation.<br>
+      If you want to make a booking for the same day or within 12 hours, please phone.</p>
+    <form method="get" action="" class="reservationForm">
+      <label for="Name" class="ui-field-contain"></label>
+      <input type="text" name="username" id="FirstName" value="" placeholder="First Name"/>
+      <label for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="LastName" value="" placeholder="Last Name"/>
+      <label for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="Email" value="" placeholder="Email"/>
+      <label for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="PhoneNumber" value="" placeholder="Phone Number"/>
+      <label for="username" class="ui-field-contain"></label>
+      <input type="text" name="username" id="numberofPeople" value="" placeholder="Number Of People"/>
+      <label  for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="Time" value="" placeholder="Preferred Time"/>
+      <label  for="username" class="ui-field-contain"></label>
+      <input type="date" name="datebook" id="Date" value="" placeholder="Date of Function"/>
+	  <div class="mebuild-block me-wrap-inputmemo ">
+		<textarea name="message_137" placeholder="Message"></textarea>
+	  </div>
+      <button>Submit</button>
+      <button>Cancel</button>
+    </form>
+  </div>
+</div>
+<!-- End of reservation page -->
+<!-- Contact page  -->
+<div id="ContactUs" data-role="page">
+  <nav data-role="navbar"> <!-- Navigation bar  -->
+    <ul>
+      <li><a href="#index" class="ui-btn ui-icon-back ui-btn-icon-top ui-btn-active ui-state-persist">Menu</a></li>
+    </ul>
+  </nav>
+  <div class="ui-content">
+    <h2 align="center">Contact Us</h2>
+    <br>
+    <p>If you have any problems with our services please fill the feedback form bellow. Your feedback is very importent for us to improve our services!</p>
+    <form method="get" action="" class="contactForm">
+      <input type="text" name="username" id="ContactFirstName" value="" placeholder="First Name"/>
+	  <label for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="ContactLastName" value="" placeholder="Last Name"/>
+	  <label for="username" class="ui-field-contain"></label>
+      <input type="text" name="username" id="ContactEmail" value="" placeholder="Email"/>
+	  <label for="username" class="ui-field-contain"></label>
+	  <input type="text" name="username" id="PhoneNumber" value="" placeholder="Phone Number"/>
+      <label for="username" class="ui-field-contain"></label>
+      <div class="mebuild-block me-wrap-inputmemo ">
+		<textarea name="message_138" placeholder="Your Message"></textarea>
+	  </div>
+      <button>Submit</button>
+      <button>Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- End of the Contact page --> 
+
+<!-- This is the Recipes page -->
+<section id="Recipes" data-role="page">
+  <div data-role="header">
+    <h1>Our Selected Recipe</h1>
+  </div>
+  <div class="ui-content" role="main">
+    <nav data-role="navbar"> <!-- Navigation Bar -->
+      <ul>
+        <li><a href="#index" class="ui-btn ui-icon-back ui-btn-icon-top ">Menu</a></li>
+        <li><a href="#Recipes" class="ui-btn ui-icon-heart ui-btn-icon-top ui-btn-active ui-state-persist">View Our Recipes</a></li>
+        <li><a href="#Reservations" class="ui-btn ui-icon-check ui-btn-icon-top ">Make A Reservation</a></li>
+      </ul>
+    </nav>
+    <h2>Try our authentic Bavarian food recipes</h2>
+    <p>Schnitzelhaus has decided to share some of its beloved Bavarian food recipes so you can try Bavaria's wonderful cuisine at home!</p>
+      <!-- Recipe thumbnails  -->
+      
+    <div class="ui-grid-c"> <!-- Class C grid used to show four items in one row  -->
+      <div class="ui-block-a containingDivrec "><a href="#RieserKiachle"> <img class="containingimgrec" src="../images/RieserKiachle.jpg" /></a></div>  <!-- Style class containingDicrec aligns the images into the same size -->
+	  <div class="ui-block-b containingDivrec "><a href="#BavarianLeberkaese" data-transition="fade"> <img class="containingimgrec" src="../images/BavarianLeberkaese.jpg" /></a></div>
+	  <div class="ui-block-b containingDivrec "><a href="#CrispySchupfnudeln" data-transition="fade"> <img class="containingimgrec" src="../images/CrispySchupfnudeln.jpg" /></a></div>
+	  <div class="ui-block-b containingDivrec "><a href="#Schneeflocken" data-transition="fade"> <img class="containingimgrec" src="../images/Schneeflocken.jpg" /></a></div>
+    </div> <!-- End of grid -->
+  </div>
+</section>
+<!-- End of Recipes page -->
+
+<!--  Pop up dialogs for recipes -->
+
+
+<!-- Rieser Kiachle -->
+<!-- Tell the JQuery scripts to use the follow page as a dialog and align the close button to the right side -->
+<div id="RieserKiachle"   data-role="page" data-dialog="true" data-close-btn="right" data-theme="a"> 
+  <div data-role="header">
+    <h1>Rieser Kachle</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <img class="menushowcase"  src="../images/RieserKiachle.jpg"/>
+    <!-- Image aligned to fit the pop up -->
+     <!-- Text aligned to fit the pop up -->
+    <p style="margin-top: -5px;" class="showcasetxtrec textes">"Rieser Kiachle" are a local speciality of Noerdlingen on the Romantic Road and are favoured with locals and visitors alike.<br>
+		This doughnut like cake that is also known as "Auszogne", "Pfannkuchen" or "Krapfen" is traditional to Bavaria and most particularly to the Rieser area.
+      
+	  <ul style="margin-top: 0px;">
+      <h2>Ingredients (for approx. 12)</h2>
+      <li>500g flour</li>
+      <li>250ml milk</li>
+      <li>2 eggs</li>
+      <li>50g butter</li>
+      <li>40g sugar</li>
+      <li>20g yeast</li>
+      <li>1 pinch of salt</li>
+      <li>approx. 1kg deep fry fat</li>
+    </ul>
+	  
+	  <ul style="margin-top: -10px;">
+      <h2>Preparation</h2>
+      <li>Mix the ingredients to a light dough and kneed well</li>
+      <li>Divide into 12 equally sized portions and roll each into a ball</li>
+      <li>Leave to rise at room temperature</li>
+      <li>With greased fingers pull each of the dough balls out to a circle of some 15 cm creating a thin bit in the centre that is almost transparent</li>
+      <li>Fry in a deep fat fryer (180 C) ensuring that the edges go golden brown whilst the centre stays white</li>
+      <li>Drain on kitchen paper and leave to cool</li>
+      <li>Dust with sugar or icing sugar before serving</li>
+    </ul>
+	  <br>
+      <br>
+    
+
+    </p>
+  </div>
+</div>
+<!-- End Rieser Kiachle --> 
+
+<!-- Bavarian Leberkaese -->
+<!-- Tell the JQuery scripts to use the follow page as a dialog and align the close button to the right side -->
+<div id="BavarianLeberkaese"   data-role="page" data-dialog="true" data-close-btn="right" data-theme="a"> 
+  <div data-role="header">
+    <h1>Bavarian Leberkaese</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <img class="menushowcase"  src="../images/BavarianLeberkaese.jpg"/>
+     <!-- Image aligned to fit the pop up -->
+     <!-- Text aligned to fit the pop up -->
+    <p style="margin-top: -5px;" class="showcasetxtrec textes">Leberkaese is a meatloaf with a really fine texture. 
+	You could compare it to maybe the texture of bologna or a frankfurter only the flavor is much different.<br>
+		This is popular in many parts of Germany as well as in Austria mostly as a breakfast and lunch meal. 
+		It is cut hot right out of the oven and enjoyed with a medium or spicy mustard.<br>
+		For breakfast it is thinly sliced and served with a platter of smoked sausage. 
+		In Bavaria a thumbs width slice is served on a roll and eaten much like we would a hamburger.<br>
+		
+      
+	  <ul style="margin-top: 0px;">
+      <h2>Ingredients</h2>
+      <li>400g lean beef</li>
+      <li>400g pork</li>
+      <li>200g bacon (with rind removed)</li>
+      <li>250ml iced water</li>
+      <li>1tsp salt</li>
+      <li>1tsp freshly ground pepper</li>
+      <li>1 medium onion</li>
+      <li>1dstspn marjoram</li>
+	  <li>Butter to grease the tin</li>
+    </ul>
+	  
+	  <ul style="margin-top: -10px;">
+      <h2>Preparation</h2>
+      <li>All meat must be well cooled before preparation begins</li>
+      <li>Cut meat into chunks and mince on a fine setting</li>
+      <li>Mix together both meats and add salt, pepper and the iced water until smooth</li>
+      <li>Mince the bacon on a medium setting and mix with the meat</li>
+      <li>Peel and grate the onion and add to the mixture together with the marjoram</li>
+      <li>Place in the fridge to cool</li>
+      <li>Put the mixture into a greased loaf tin</li>
+	  <li>Smooth the surface and, using the blade of a knife, make a diamond-shaped pattern across the top (about 5 mm deep)</li>
+	  <li>Bake in the centre of a preheated oven (180 C) for about an hour (fan oven: approx. 160 C, gas mark 2 to 2.5)</li>
+    </ul>
+	  <br>
+      <br>
+    
+
+    </p>
+  </div>
+</div>
+<!-- End Bavarian Leberkaese -->
+
+<!-- Crispy Schupfnudeln -->
+<!-- Tell the JQuery scripts to use the follow page as a dialog and align the close button to the right side -->
+<div id="CrispySchupfnudeln"   data-role="page" data-dialog="true" data-close-btn="right" data-theme="a"> 
+  <div data-role="header">
+    <h1>Crispy Schupfnudeln</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <img class="menushowcase"  src="../images/CrispySchupfnudeln.jpg"/>
+     <!-- Image aligned to fit the pop up -->
+     <!-- Text aligned to fit the pop up -->
+    <p style="margin-top: -5px;" class="showcasetxtrec textes">Leberkaese is a meatloaf with a really fine texture. 
+	You could compare it to maybe the texture of bologna or a frankfurter only the flavor is much different.<br>
+		This is popular in many parts of Germany as well as in Austria mostly as a breakfast and lunch meal. 
+		It is cut hot right out of the oven and enjoyed with a medium or spicy mustard.<br>
+		For breakfast it is thinly sliced and served with a platter of smoked sausage. 
+		In Bavaria a thumbs width slice is served on a roll and eaten much like we would a hamburger.<br>
+		
+      
+	  <ul style="margin-top: 0px;">
+      <h2>Ingredients</h2>
+      <li>400 g floury potatoes</li>
+      <li>50 g soft butter</li>
+      <li>2 medium sized egg yolks</li>
+      <li>150 g flour</li>
+      <li>3 dstspn flour</li>
+      <li>40 g melted butter</li>
+      <li>Salt, pepper, nutmeg</li>
+    </ul>
+	  
+	  <ul style="margin-top: -10px;">
+      <h2>Preparation</h2>
+      <li>Boil the potatoes in their skins, peel, mash and leave to cool</li>
+      <li>Add the soft butter, egg yolks and flour</li>
+      <li>Season with salt, pepper and nutmeg</li>
+      <li>Knead until smooth and form into balls, cover and leave to stand for 15 minutes</li>
+      <li>On a floured surface cut the dough into pieces and roll into bullet shaped noodles (Schupfnudeln)</li>
+      <li>Mix 250 ml of cold water with 3 dstspns flour and add to a pan of 3 l of boiling salted water.</li>
+      <li>Boil the noodles in the water in 3 portions until thy rise to the surface</li>
+	  <li>Remove from the water and drain</li>
+	  <li>Toss in melted butter</li>
+	  <li>Serve with venison stew or roasted or as part of a dessert with stewed fruit</li>
+    </ul>
+	  <br>
+      <br>
+    
+
+    </p>
+  </div>
+</div>
+<!-- End Crispy Schupfnudeln -->
+
+
+<!-- Schneeflocken -->
+<!-- Tell the JQuery scripts to use the follow page as a dialog and align the close button to the right side -->
+<div id="Schneeflocken"   data-role="page" data-dialog="true" data-close-btn="right" data-theme="a"> 
+  <div data-role="header">
+    <h1>Schneeflocken</h1>
+  </div>
+  <div class="ui-body-a"> <br>
+    <img class="menushowcase"  src="../images/Schneeflocken.jpg"/>
+     <!-- Image aligned to fit the pop up -->
+     <!-- Text aligned to fit the pop up -->
+    <p style="margin-top: -5px;" class="showcasetxtrec textes">These biscuits are ideal to make together with children.
+		They just melt in your mouth as if they really were made out of snow! And they taste just out of this world!
+      
+	  <ul style="margin-top: 0px;">
+      <h2>Ingredients</h2>
+      <li>250g butter</li>
+      <li>100g icing sugar</li>
+      <li>A few drops of vailla essence</li>
+      <li>100g plain flour</li>
+      <li>250g cornflour</li>
+      <li>50g ground almonds</li>
+    </ul>
+	  
+	  <ul style="margin-top: -10px;">
+      <h2>Preparation</h2>
+      <li>Mix all ingredients well and leave to cool for 30 minutes in a cool place</li>
+      <li>Shape walnut-sized balls from the dough</li>
+      <li>Place on a baking tray lined with baking paper ensuring that there is plenty of room between the biscuits</li>
+      <li>Imprint stripes onto the balls with a floured fork if you wish (they taste just as good with or without the stripes!)</li>
+      <li>Bake at 175 C for approximatelt 20 minutes</li>
+    </ul>
+	  <br>
+      <br>
+    
+
+    </p>
+  </div>
+</div>
+<!-- End Schneeflocken --> 
+
+
+<!-- End of the recipes dialog pages -->
+
+<!-- End of index page -->
+
+</body>
+</html>
